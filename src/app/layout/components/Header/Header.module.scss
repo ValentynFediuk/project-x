@@ -1,0 +1,13 @@
+.header {
+  background: #212235;
+  border-bottom: 0.1rem solid $primary-color;
+  box-shadow: 0 0.5rem 5rem $primary-color;
+}
+
+.inner {
+  max-width: 160rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

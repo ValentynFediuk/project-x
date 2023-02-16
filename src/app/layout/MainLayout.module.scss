@@ -1,0 +1,24 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  > header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: 5.5rem;
+  }
+
+  > main {
+    flex: 1;
+    padding: 10rem 0;
+  }
+
+  > footer {
+    height: 5.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

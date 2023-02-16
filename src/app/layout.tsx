@@ -1,18 +1,21 @@
-import './globals.css'
+import { FC } from "react";
+import { Header } from './layout/components/Header/Header'
+import { Footer } from './layout/components/Footer/Footer'
+import 'styles/globals.scss'
+import styles from './layout/MainLayout.module.scss'
+import { MainLayoutProps } from "./layout/MainLayout.props";
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
-      <body>{children}</body>
-    </html>
-  )
-}
+const RootLayout: FC<MainLayoutProps> = ({ children })=> (
+  <html lang='en'>
+  <head><title>Project X</title></head>
+  <body>
+  <div className={styles.layout}>
+    <Header />
+    <main>{children}</main>
+    <Footer />
+  </div>
+  </body>
+  </html>
+)
+
+export default RootLayout
